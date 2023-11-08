@@ -7,6 +7,7 @@ import { RNCamera } from 'react-native-camera';
 
 
 
+
 // Define the types for your navigation stack
 export type RootStackParamList = {
   Home: undefined; // Add other screens as needed
