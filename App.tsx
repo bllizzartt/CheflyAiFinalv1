@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import HomeScreen from './HomeScreen'; // Adjust the import path as necessary
 import IngredientScreen from './IngredientScreen'; // Import the IngredientScreen
+import RecommendedMeals from './RecommendedMeals'; // Adjust the import path as necessary if your file is in a different directory
 import { RNCamera } from 'react-native-camera';
 
 
@@ -24,6 +26,8 @@ const App = () => {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Ingredient" component={IngredientScreen} options={{ title: 'Ingredients Identified' }} />
+        <Stack.Screen name="Recommended Meals" component={RecommendedMeals} />
+
         {/* Add other screens here as needed */}
       </Stack.Navigator>
     </NavigationContainer>
