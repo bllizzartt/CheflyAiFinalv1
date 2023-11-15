@@ -5,6 +5,8 @@ import { SafeAreaView, StyleSheet } from 'react-native';
 import HomeScreen from './HomeScreen'; // Adjust the import path as necessary
 import IngredientScreen from './IngredientScreen'; // Import the IngredientScreen
 import RecommendedMeals from './RecommendedMeals'; // Adjust the import path as necessary if your file is in a different directory
+import MealCard from './MealCard'; // Ensure this import path is correct
+
 import { RNCamera } from 'react-native-camera';
 
 
@@ -14,7 +16,8 @@ import { RNCamera } from 'react-native-camera';
 export type RootStackParamList = {
   Home: undefined; // Add other screens as needed
   Ingredient: undefined; // Define the type for the Ingredient screen route
-
+  RecommendedMeals: undefined;
+  MealDetails: { mealId: string }; // Assuming you pass a mealId to this screen
 };
 
 // Create a stack navigator
@@ -27,7 +30,7 @@ const App = () => {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Ingredient" component={IngredientScreen} options={{ title: 'Ingredients Identified' }} />
         <Stack.Screen name="Recommended Meals" component={RecommendedMeals} />
-
+        <Stack.Screen name="MealDetails" component={MealCard} options={{ title: 'Meal Details' }} />
         {/* Add other screens here as needed */}
       </Stack.Navigator>
     </NavigationContainer>
