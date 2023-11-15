@@ -5,9 +5,8 @@ const MealCard = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Text>Back</Text>
       </TouchableOpacity>
-      <Text style={styles.header}>Meal #1</Text>
+      {/* <Text style={styles.header}>Meal #1</Text> */}
       <Image
         source={{ uri: 'path-to-your-image' }}
         style={styles.image}
